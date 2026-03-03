@@ -3,144 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizwan Biryani Platform - Full Business Case</title>
+    <title>Rizwan Biryani - Complete Project Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body { font-family: 'Poppins', sans-serif; background-color: #0b0f1a; color: #e2e8f0; line-height: 1.6; }
+        .amber-text { color: #fbbf24; }
         .amber-gradient { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
-        .card-dark { background: #161c2d; border: 1px solid #2d3748; border-radius: 16px; transition: all 0.3s ease; }
-        .card-dark:hover { border-color: #fbbf24; box-shadow: 0 10px 30px -10px rgba(251, 191, 36, 0.2); }
+        .card-dark { background: #161c2d; border: 1px solid #2d3748; border-radius: 12px; margin-bottom: 20px; transition: 0.3s; }
+        .card-dark:hover { border-color: #fbbf24; }
+        .section-title { border-left: 4px solid #fbbf24; padding-left: 15px; margin-bottom: 25px; font-weight: 700; font-size: 1.8rem; }
         .price-strike { text-decoration: line-through; color: #64748b; font-size: 1.2rem; }
-        .highlight-box { border-left: 4px solid #fbbf24; background: rgba(251, 191, 36, 0.05); padding: 20px; border-radius: 0 12px 12px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #2d3748; padding: 12px; text-align: left; }
+        th { background-color: #1e293b; color: #fbbf24; }
+        .badge { background: #fbbf24; color: #000; padding: 2px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
     </style>
 </head>
 <body class="p-4 md:p-12">
 
-    <header class="text-center mb-20">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">RIZWAN <span class="text-amber-500">BIRYANI</span></h1>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto">Sirf ek App nahi, aapke Restaurant ka Digital Empire. Swiggy-Zomato ko 30% commission dena band karein.</p>
+    <header class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">RIZWAN <span class="amber-text">BIRYANI</span></h1>
+        <p class="text-xl text-slate-400 font-semibold">Aapki Dukaan Ka Apna Digital Platform</p>
+        <p class="mt-4 text-amber-500 italic font-bold">"Apni dukaan, apna app, apna data, apna munafa — kisi Swiggy-Zomato ka 30% commission nahi."</p>
     </header>
 
-    <section class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">Aapka Paisa Kahan <span class="text-red-500">Doob Raha Hai?</span></h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="card-dark p-8 border-t-4 border-red-500">
-                <h3 class="text-xl font-bold mb-4">Purana Tareeka (Loss)</h3>
-                <ul class="space-y-4 text-slate-400">
-                    <li>❌ 30% Commission har order par.</li>
-                    <li>❌ Customer ka data aapka nahi (Swiggy ka hai).</li>
-                    <li>❌ POS software ka alag kharcha (Monthly).</li>
-                    <li>❌ Inventory ka koi digital hisaab nahi.</li>
-                </ul>
-            </div>
-            <div class="card-dark p-8 border-t-4 border-green-500">
-                <h3 class="text-xl font-bold mb-4 text-green-400">Rizwan Platform (Profit)</h3>
-                <ul class="space-y-4 text-slate-400">
-                    <li>✅ <b>0% Commission:</b> Pura paisa aapke account mein.</li>
-                    <li>✅ <b>Customer Data:</b> Aapka apna loyal customer base.</li>
-                    <li>✅ <b>All-in-One:</b> App + POS + Kitchen + Inventory.</li>
-                    <li>✅ <b>Direct Marketing:</b> WhatsApp aur Push notifications.</li>
-                </ul>
+    <section class="mb-16">
+        <h2 class="section-title text-3xl">📋 Executive Summary</h2>
+        <div class="card-dark p-8">
+            <p class="mb-4">Rizwan Biryani ek production-ready, full-stack <b>Progressive Web Application (PWA)</b> hai jo restaurant operations ke liye design kiya gaya hai. Ye ek complete digital ecosystem hai jo customer ordering se lekar kitchen operations aur delivery management tak sab handle karta hai.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-amber-500/10 p-4 rounded border border-amber-500/30 font-bold">
+                    🚀 रिप्लेस करें: Swiggy/Zomato listing, POS software, Delivery apps, aur Analytics dashboard — Sab ek hi solution mein.
+                </div>
+                <div class="bg-green-500/10 p-4 rounded border border-green-500/30 font-bold">
+                    💰 Zero Commission: Ab har order ka 100% paisa seedha aapke account mein.
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="mb-20">
-        <div class="max-w-4xl mx-auto card-dark p-1 md:p-10 border-2 border-amber-500 relative shadow-2xl">
-            <div class="absolute top-0 right-0 amber-gradient text-black px-12 py-2 rotate-45 translate-x-10 translate-y-4 font-bold shadow-lg">
-                LIMITED OFFER
-            </div>
-            
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold mb-2">Investment Details</h2>
-                <p class="text-slate-400 italic">Market Value of this Tech: ₹15,00,000+</p>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-around items-center bg-slate-900/50 p-8 rounded-2xl mb-8 border border-slate-700">
-                <div class="text-center mb-6 md:mb-0">
-                    <p class="text-slate-400 mb-1">Standard Price</p>
-                    <span class="price-strike">₹8,500/month</span>
-                </div>
-                <div class="text-center bg-amber-500/10 p-6 rounded-xl border border-amber-500/30">
-                    <p class="text-amber-500 font-bold mb-1">Introductory Offer</p>
-                    <div class="flex items-center justify-center">
-                        <span class="text-6xl font-black text-amber-500">₹2,000</span>
-                        <span class="text-xl ml-2">/month</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 mb-8 px-4">
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <span class="text-green-500 mr-2">✔</span>
-                        <p><b>1 Year Domain FREE:</b> Aapki dukaan ki online pehchan (e.g. www.rizwanbiryani.com).</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-green-500 mr-2">✔</span>
-                        <p><b>1 Year Hosting FREE:</b> High-speed cloud servers taki app kabhi down na ho.</p>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <span class="text-green-500 mr-2">✔</span>
-                        <p><b>Unlimited Orders:</b> Kitne bhi orders aayein, fees hamesha fix rahegi.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-green-500 mr-2">✔</span>
-                        <p><b>Staff Training:</b> POS aur Kitchen system chalane ki training.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="highlight-box mt-4 text-sm text-slate-300">
-                <b>Imaandaari ki Baat (Transparency):</b> Domain aur Hosting ke charges developer ki fees nahi hoti. Ye wo server "kiraya" hota hai jo global companies (jaise Google/Amazon) ko dena padta hai. Developer hone ke naate, main ye kharcha <b>1 saal tak khud utha raha hoon</b> taki aapka business bina kisi tension ke digital ho sake. 
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-20 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10 text-center">Developer Ka Kaam Kya Hai?</h2>
+    <section class="mb-16">
+        <h2 class="section-title text-3xl">🏗️ Platform Ke 3 Main Pillar</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="card-dark p-6">
-                <h4 class="text-amber-500 font-bold mb-3">1. Architecture & Security</h4>
-                <p class="text-sm text-slate-400">Ye koi ready-made template nahi hai. Maine ise <b>Next.js aur Firebase</b> par scrap se banaya hai taki ye bank-level secure ho aur fast chale.</p>
+                <h3 class="text-xl font-bold mb-4 amber-text">1. Customer App</h3>
+                <ul class="text-sm space-y-2">
+                    <li>• PWA: App ki tarah install hota hai.</li>
+                    <li>• QR Ordering: Table scan ordering.</li>
+                    <li>• Wallet: 5% Automatic Cashback.</li>
+                    <li>• Referral: ₹50 bonus for users.</li>
+                    <li>• Real-time Tracking: Order status updates.</li>
+                </ul>
             </div>
             <div class="card-dark p-6">
-                <h4 class="text-amber-500 font-bold mb-3">2. 24/7 Monitoring</h4>
-                <p class="text-sm text-slate-400">Agar peak hours (Sunday Night) mein traffic badhta hai, toh developer piche se servers ko manage karta hai taki orders fail na hon.</p>
+                <h3 class="text-xl font-bold mb-4 amber-text">2. Admin / POS</h3>
+                <ul class="text-sm space-y-2">
+                    <li>• Dashboard: Revenue aur Profit analytics.</li>
+                    <li>• Inventory: Auto-deduct stock system.</li>
+                    <li>• KDS: Kitchen Display with sound alerts.</li>
+                    <li>• Khata Book: Customer debt tracking.</li>
+                    <li>• POS: Offline counter billing.</li>
+                </ul>
             </div>
             <div class="card-dark p-6">
-                <h4 class="text-amber-500 font-bold mb-3">3. Future-Proofing</h4>
-                <p class="text-sm text-slate-400">Market badal raha hai. Naye payment methods (UPI, Wallets) aur naye features (AI analytics) ko system mein update karte rehna developer ki zimmedari hai.</p>
+                <h3 class="text-xl font-bold mb-4 amber-text">3. Delivery Panel</h3>
+                <ul class="text-sm space-y-2">
+                    <li>• Order Accept/Reject system.</li>
+                    <li>• Map Tracking via Leaflet.</li>
+                    <li>• Rider Earnings Wallet.</li>
+                    <li>• Profile & Availability toggle.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="mb-20 bg-slate-900 p-10 rounded-3xl border border-slate-800 text-center">
-        <h2 class="text-3xl font-bold mb-6">Simple Math: Aapka Paisa Kaise Vasool Hoga?</h2>
-        <p class="text-xl mb-8">Agar aap mahine ka <b>₹1 Lakh</b> ka business Swiggy/Zomato se karte hain:</p>
-        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div class="p-6 bg-red-500/10 rounded-xl border border-red-500/20">
-                <p class="text-sm">Unka Commission (30%)</p>
-                <p class="text-3xl font-bold text-red-500">₹30,000</p>
+    <section class="mb-16">
+        <h2 class="section-title text-3xl">💎 Enterprise-Grade Features</h2>
+        <div class="card-dark p-2 overflow-x-auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                        <th>Aapka Fayda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Inventory AI</b></td>
+                        <td>Recipe linked auto-deduction.</td>
+                        <td>Stock chori aur wastage khatam.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Store Guard</b></td>
+                        <td>Auto open/close with countdown.</td>
+                        <td>Band dukaan mein bhi advance order.</td>
+                    </tr>
+                    <tr>
+                        <td><b>WhatsApp Bot</b></td>
+                        <td>Auto order confirmation & status.</td>
+                        <td>Customer trust aur professionalism.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Review Incentive</b></td>
+                        <td>₹10 wallet credit for reviews.</td>
+                        <td>Google ratings aur brand building.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="section-title text-3xl text-center">💰 Investment & Offer</h2>
+        <div class="max-w-4xl mx-auto card-dark p-8 border-2 border-amber-500 relative overflow-hidden">
+            <div class="absolute top-0 right-0 amber-gradient text-black px-12 py-2 rotate-45 translate-x-10 translate-y-4 font-bold">
+                SPECIAL OFFER
             </div>
-            <div class="p-6 bg-green-500/10 rounded-xl border border-green-500/20">
-                <p class="text-sm">Rizwan App Fees</p>
+            
+            <div class="text-center mb-8">
+                <p class="text-slate-400">Market Value to Build: <span class="line-through">₹10 Lakh - ₹15 Lakh</span></p>
+                <div class="mt-4">
+                    <span class="price-strike">₹8,500/month</span><br>
+                    <span class="text-6xl font-black amber-text leading-tight">₹2,000</span>
+                    <span class="text-xl text-slate-400">/month</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-8 text-sm">
+                <div class="bg-slate-800/50 p-4 rounded border border-green-500/30">
+                    <h4 class="font-bold text-green-400 mb-2">🎁 Included Free (1st Year)</h4>
+                    <p>• Custom Domain Name (.com / .in / .online)</p>
+                    <p>• Premium Cloud Hosting</p>
+                    <p>• SSL Security Certificate</p>
+                </div>
+                <div class="bg-slate-800/50 p-4 rounded border border-blue-500/30">
+                    <h4 class="font-bold text-blue-400 mb-2">🛠️ Developer Support</h4>
+                    <p>• 24/7 Technical Maintenance</p>
+                    <p>• Database Backup & Security</p>
+                    <p>• Monthly Performance Reports</p>
+                </div>
+            </div>
+
+            <div class="p-4 bg-amber-500/5 border-l-4 border-amber-500 italic text-sm text-slate-300">
+                <b>Note:</b> Chuki Domain aur Hosting ka kharcha external providers (Server companies) ko jaata hai aur ye developer ka kharcha nahi uthata, isliye main pehle saal ka ye kharcha khud manage kar raha hoon taki aapka business bina kisi up-front cost ke digital ho sake.
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="section-title text-3xl">👨‍💻 Dev Ka Kaam Kya Hai?</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-sm text-slate-400">
+            <div class="card-dark p-6">
+                <h4 class="font-bold text-white mb-2">1. Coding & Architecture</h4>
+                <p>Maine Next.js 16 aur Firebase use kiya hai jo Flipkart aur Zomato ki level ki technology hai. Isse aapka app ultra-fast aur secure rehta hai.</p>
+            </div>
+            <div class="card-dark p-6">
+                <h4 class="font-bold text-white mb-2">2. Real-time Monitoring</h4>
+                <p>Server ko 24 ghante monitor karna taki jab 100 log ek sath order karein, toh app crash na ho. Bugs fix karna aur security updates dena meri zimmedari hai.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16 bg-slate-900 p-8 rounded-3xl border border-slate-800 text-center">
+        <h2 class="text-3xl font-bold mb-6">Simple ROI (Bachat ka Hisaab)</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            <div class="p-6 bg-red-500/10 rounded-xl border border-red-500/20 w-full md:w-64">
+                <p class="text-sm">Current Commission Loss</p>
+                <p class="text-3xl font-bold text-red-500">₹40,000+</p>
+            </div>
+            <div class="p-6 bg-green-500/10 rounded-xl border border-green-500/20 w-full md:w-64">
+                <p class="text-sm">Rizwan App Cost</p>
                 <p class="text-3xl font-bold text-green-500">₹2,000</p>
             </div>
-            <div class="p-6 amber-gradient rounded-xl text-black">
-                <p class="text-sm font-bold">Har Mahine Ki Saaf Bachat</p>
-                <p class="text-3xl font-black">₹28,000</p>
+            <div class="p-6 amber-gradient rounded-xl text-black w-full md:w-64">
+                <p class="text-sm font-bold">Net Monthly Saving</p>
+                <p class="text-3xl font-black">₹38,000</p>
             </div>
         </div>
-        <p class="mt-10 text-slate-400 italic">"Matlab, app ki fees toh pehle 2 din ke orders se hi vasool ho jayegi!"</p>
     </section>
 
-    <footer class="text-center py-10 border-t border-slate-800">
-        <p class="text-slate-500 mb-2 font-bold">Rizwan Biryani Platform - Your Business, Your Brand.</p>
-        <p class="text-slate-600 text-sm">Developed with ❤️ for Modern Restaurants.</p>
+    <footer class="mt-20 pt-10 border-t border-slate-800">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] text-slate-500 uppercase tracking-widest text-center">
+            <div>Next.js 16 (App Router)</div>
+            <div>Firebase Auth & Firestore</div>
+            <div>Cloudinary Image CDN</div>
+            <div>Tailwind CSS 4</div>
+        </div>
+        <p class="text-center mt-10 text-slate-600 text-xs">© 2026 Rizwan Biryani Platform | Developed with Industrial Standards</p>
     </footer>
 
 </body>
