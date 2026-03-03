@@ -7,20 +7,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body { font-family: 'Poppins', sans-serif; background-color: #0b0f1a; color: #e2e8f0; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background-color: #0b0f1a; color: #e2e8f0; line-height: 1.6; scroll-behavior: smooth; }
         .amber-text { color: #fbbf24; }
         .amber-gradient { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
         .card-dark { background: #161c2d; border: 1px solid #2d3748; border-radius: 12px; margin-bottom: 20px; transition: 0.3s; }
-        .card-dark:hover { border-color: #fbbf24; }
+        .card-dark:hover { border-color: #fbbf24; transform: translateY(-5px); }
         .section-title { border-left: 4px solid #fbbf24; padding-left: 15px; margin-bottom: 25px; font-weight: 700; font-size: 1.8rem; }
         .price-strike { text-decoration: line-through; color: #64748b; font-size: 1.2rem; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { border: 1px solid #2d3748; padding: 12px; text-align: left; }
         th { background-color: #1e293b; color: #fbbf24; }
-        .badge { background: #fbbf24; color: #000; padding: 2px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: 0.4s;
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+        .pulse {
+            animation: pulse-ring 1.5s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            100% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
     </style>
 </head>
 <body class="p-4 md:p-12">
+
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi, I am interested in Rizwan Biryani Digital Platform." class="whatsapp-btn pulse" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        <span>Developer se Baat Karein</span>
+    </a>
 
     <header class="text-center mb-16">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">RIZWAN <span class="amber-text">BIRYANI</span></h1>
@@ -46,31 +80,31 @@
     <section class="mb-16">
         <h2 class="section-title text-3xl">🏗️ Platform Ke 3 Main Pillar</h2>
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="card-dark p-6">
+            <div class="card-dark p-6 text-center md:text-left">
                 <h3 class="text-xl font-bold mb-4 amber-text">1. Customer App</h3>
                 <ul class="text-sm space-y-2">
                     <li>• PWA: App ki tarah install hota hai.</li>
                     <li>• QR Ordering: Table scan ordering.</li>
                     <li>• Wallet: 5% Automatic Cashback.</li>
                     <li>• Referral: ₹50 bonus for users.</li>
-                    <li>• Real-time Tracking: Order status updates.</li>
+                    <li>• Real-time Tracking: Order updates.</li>
                 </ul>
             </div>
-            <div class="card-dark p-6">
+            <div class="card-dark p-6 text-center md:text-left">
                 <h3 class="text-xl font-bold mb-4 amber-text">2. Admin / POS</h3>
                 <ul class="text-sm space-y-2">
-                    <li>• Dashboard: Revenue aur Profit analytics.</li>
-                    <li>• Inventory: Auto-deduct stock system.</li>
-                    <li>• KDS: Kitchen Display with sound alerts.</li>
+                    <li>• Dashboard: Revenue & Profit analytics.</li>
+                    <li>• Inventory: Auto-deduct stock.</li>
+                    <li>• KDS: Kitchen Display System.</li>
                     <li>• Khata Book: Customer debt tracking.</li>
                     <li>• POS: Offline counter billing.</li>
                 </ul>
             </div>
-            <div class="card-dark p-6">
+            <div class="card-dark p-6 text-center md:text-left">
                 <h3 class="text-xl font-bold mb-4 amber-text">3. Delivery Panel</h3>
                 <ul class="text-sm space-y-2">
                     <li>• Order Accept/Reject system.</li>
-                    <li>• Map Tracking via Leaflet.</li>
+                    <li>• Map Tracking via Leaflet JS.</li>
                     <li>• Rider Earnings Wallet.</li>
                     <li>• Profile & Availability toggle.</li>
                 </ul>
@@ -118,12 +152,12 @@
     <section class="mb-16">
         <h2 class="section-title text-3xl text-center">💰 Investment & Offer</h2>
         <div class="max-w-4xl mx-auto card-dark p-8 border-2 border-amber-500 relative overflow-hidden">
-            <div class="absolute top-0 right-0 amber-gradient text-black px-12 py-2 rotate-45 translate-x-10 translate-y-4 font-bold">
+            <div class="absolute top-0 right-0 amber-gradient text-black px-12 py-2 rotate-45 translate-x-10 translate-y-4 font-bold shadow-lg">
                 SPECIAL OFFER
             </div>
             
             <div class="text-center mb-8">
-                <p class="text-slate-400">Market Value to Build: <span class="line-through">₹10 Lakh - ₹15 Lakh</span></p>
+                <p class="text-slate-400">Market Value: <span class="line-through">₹10 Lakh - ₹15 Lakh</span></p>
                 <div class="mt-4">
                     <span class="price-strike">₹8,500/month</span><br>
                     <span class="text-6xl font-black amber-text leading-tight">₹2,000</span>
@@ -131,10 +165,10 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-4 mb-8 text-sm">
+            <div class="grid md:grid-cols-2 gap-4 mb-8 text-sm text-center md:text-left">
                 <div class="bg-slate-800/50 p-4 rounded border border-green-500/30">
                     <h4 class="font-bold text-green-400 mb-2">🎁 Included Free (1st Year)</h4>
-                    <p>• Custom Domain Name (.com / .in / .online)</p>
+                    <p>• Custom Domain Name (.com / .in)</p>
                     <p>• Premium Cloud Hosting</p>
                     <p>• SSL Security Certificate</p>
                 </div>
@@ -147,21 +181,7 @@
             </div>
 
             <div class="p-4 bg-amber-500/5 border-l-4 border-amber-500 italic text-sm text-slate-300">
-                <b>Note:</b> Chuki Domain aur Hosting ka kharcha external providers (Server companies) ko jaata hai aur ye developer ka kharcha nahi uthata, isliye main pehle saal ka ye kharcha khud manage kar raha hoon taki aapka business bina kisi up-front cost ke digital ho sake.
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-16">
-        <h2 class="section-title text-3xl">👨‍💻 Dev Ka Kaam Kya Hai?</h2>
-        <div class="grid md:grid-cols-2 gap-8 text-sm text-slate-400">
-            <div class="card-dark p-6">
-                <h4 class="font-bold text-white mb-2">1. Coding & Architecture</h4>
-                <p>Maine Next.js 16 aur Firebase use kiya hai jo Flipkart aur Zomato ki level ki technology hai. Isse aapka app ultra-fast aur secure rehta hai.</p>
-            </div>
-            <div class="card-dark p-6">
-                <h4 class="font-bold text-white mb-2">2. Real-time Monitoring</h4>
-                <p>Server ko 24 ghante monitor karna taki jab 100 log ek sath order karein, toh app crash na ho. Bugs fix karna aur security updates dena meri zimmedari hai.</p>
+                <b>Note:</b> Domain aur Hosting server companies ka kharcha hai. Main pehle saal ka ye kharcha khud manage kar raha hoon taki aapka business bina up-front cost ke digital ho sake.
             </div>
         </div>
     </section>
